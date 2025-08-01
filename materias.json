@@ -292,7 +292,7 @@
     "nombre": "Farmacología especial",
     "creditos": 3,
     "semestre": 7,
-    "abre": [Farmacia hospitalaria],
+    "abre": ["farmacia-hospitalaria"],
     "tipo": "normal"
   },
   {
