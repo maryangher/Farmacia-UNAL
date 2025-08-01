@@ -312,6 +312,14 @@
     "tipo": "normal"
   },
   {
+    "id": "Administración-farmaceutica",
+    "nombre": "Administración farmacéutica",
+    "creditos": 3,
+    "semestre": 7,
+    "abre": ["Aseguramiento de calidad"],
+    "tipo": "normal"
+  },
+  {
     "id": "toxicologia",
     "nombre": "Toxicología",
     "creditos": 3,
