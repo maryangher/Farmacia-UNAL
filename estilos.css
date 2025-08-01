@@ -1,0 +1,103 @@
+body 
+{
+  font-family: sans-serif;
+  background-color: white;
+  padding: 20px;
+  color: #333;
+}
+h1 
+{
+  text-align: center;
+  color: #c2185b;
+  margin-bottom: 10px;
+}
+#barra-progreso 
+{
+  width: 100%;
+  height: 25px;
+  background-color: #f8bbd0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+#progreso 
+{
+  height: 100%;
+  background-color: #ec407a;
+  color: white;
+  text-align: center;
+  line-height: 25px;
+  font-weight: bold;
+  transition: width 0.3s;
+}
+#reset 
+{
+  background-color: #f06292;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto 20px;
+}
+#malla 
+{
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.semestre 
+{
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.semestre h2 
+{
+  text-align: center;
+  color: #ad1457;
+}
+
+.materia 
+{
+  background-color: white;
+  border: 2px solid #f48fb1;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  color: #d81b60;
+  font-weight: bold;
+  position: relative;
+}
+
+.materia .creditos 
+{
+  font-size: 0.75em;
+  color: black;
+  margin-top: 5px;
+}
+
+.materia.aprobada 
+{
+  text-decoration: line-through;
+  background-color: #f8bbd0;
+}
+
+.materia.bloqueada 
+{
+  opacity: 0.4;
+  pointer-events: none;
+  background-color: #fde0ef;
+}
+#creditos-aprobados 
+{
+  text-align: center;
+  font-weight: bold;
+  color: #880e4f;
+  margin-bottom: 15px;
+}
