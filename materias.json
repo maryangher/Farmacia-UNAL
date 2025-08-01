@@ -316,7 +316,7 @@
     "nombre": "Administración farmacéutica",
     "creditos": 3,
     "semestre": 7,
-    "abre": ["Aseguramiento de la calidad"],
+    "abre": ["aseguramiento-calidad"],
     "tipo": "normal"
   },
   {
