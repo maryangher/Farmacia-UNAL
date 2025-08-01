@@ -312,11 +312,11 @@
     "tipo": "normal"
   },
   {
-    "id": "Administración-farmaceutica",
+    "id": "administración-farmaceutica",
     "nombre": "Administración farmacéutica",
     "creditos": 3,
     "semestre": 7,
-    "abre": ["Aseguramiento de calidad"],
+    "abre": ["Aseguramiento de la calidad"],
     "tipo": "normal"
   },
   {
