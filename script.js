@@ -47,11 +47,6 @@ document.addEventListener('DOMContentLoaded', function () {
           creditos.textContent = `${m.creditos} créditos`;
           div.appendChild(creditos);
 
-          if (i === 1) {
-            div.classList.add('desbloqueada');
-          } else {
-            div.classList.add('bloqueada');
-          }
           if (i === 0 || i === 1) {
             div.classList.add('desbloqueada');
           } else {
