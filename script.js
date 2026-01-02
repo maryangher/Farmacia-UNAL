@@ -17,12 +17,16 @@ document.addEventListener('DOMContentLoaded', function () {
   function crearMalla() {
     const maxSemestre = Math.max(...materias.map(m => m.semestre));
 
-    for (let i = 1; i <= maxSemestre; i++) {
+    for (let i = 0; i <= maxSemestre; i++) {
       const columna = document.createElement('div');
       columna.classList.add('semestre');
 
       const titulo = document.createElement('h2');
+      if (i === 0) {
+        titulo.textContent = "Semestre 0";
+      } else {
       titulo.textContent = `Semestre ${romano(i)}`;
+      }
       columna.appendChild(titulo);
 
       materias
@@ -48,6 +52,11 @@ document.addEventListener('DOMContentLoaded', function () {
           } else {
             div.classList.add('bloqueada');
           }
+          if (i === 0 || i === 1) {
+            div.classList.add('desbloqueada');
+          } else {
+            div.classList.add('bloqueada');
+          }
 
           div.addEventListener('click', function () {
             if (!div.classList.contains('bloqueada')) {
@@ -66,22 +75,38 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function actualizarEstadoMaterias() {
-    const aprobadas = Array.from(document.querySelectorAll('.materia.aprobada')).map(m => m.dataset.id);
+  const aprobadas = Array.from(document.querySelectorAll('.materia.aprobada'))
+                         .map(m => m.dataset.id);
 
-    materias.forEach(m => {
-      const div = document.querySelector(`.materia[data-id="${m.id}"]`);
-      const prerrequisitos = materias.filter(mat => mat.abre.includes(m.id)).map(p => p.id);
+  materias.forEach(m => {
+    const div = document.querySelector(`.materia[data-id="${m.id}"]`);
 
-      if (m.semestre === 1 || prerrequisitos.every(p => aprobadas.includes(p))) {
-        div.classList.remove('bloqueada');
-        div.classList.add('desbloqueada');
-      } else {
-        div.classList.add('bloqueada');
-        div.classList.remove('desbloqueada');
-        div.classList.remove('aprobada');
-      }
-    });
-  }
+    const prerrequisitos = materias
+      .filter(mat => mat.abre.includes(m.id))
+      .map(p => p.id);
+
+    let desbloqueada = false;
+
+    if (m.semestre === 0) {
+      desbloqueada = true;
+    } 
+    else if (prerrequisitos.length === 0 && m.semestre === 1) {
+      desbloqueada = true;
+    }
+    else {
+      desbloqueada = prerrequisitos.every(p => aprobadas.includes(p));
+    }
+
+    if (desbloqueada) {
+      div.classList.remove('bloqueada');
+      div.classList.add('desbloqueada');
+    } else {
+      div.classList.add('bloqueada');
+      div.classList.remove('desbloqueada');
+      div.classList.remove('aprobada');
+    }
+  });
+}
 
   function guardarProgreso() {
     const estado = {};
@@ -102,10 +127,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function actualizarProgreso() {
   const materiasDOM = document.querySelectorAll('.materia');
-  const aprobadas = document.querySelectorAll('.materia.aprobada');
 
   const total = materiasDOM.length;
-  const porcentaje = Math.round((aprobadas.length / total) * 100);
+  const aprobadas = document.querySelectorAll('.materia.aprobada').length;
+
+  const porcentaje = Math.round((aprobadas / total) * 100);
 
   progresoBarra.style.width = `${porcentaje}%`;
   progresoBarra.textContent = `${porcentaje}%`;
@@ -115,9 +141,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   materiasDOM.forEach(m => {
     const c = parseInt(m.dataset.creditos || "0", 10);
-    creditosTotales += c;
-    if (m.classList.contains('aprobada')) {
-      creditosAprobados += c;
+    if (c > 0) {
+      creditosTotales += c;
+      if (m.classList.contains('aprobada')) {
+        creditosAprobados += c;
+      }
     }
   });
 
@@ -125,15 +153,6 @@ document.addEventListener('DOMContentLoaded', function () {
   creditosTexto.textContent = `Créditos aprobados: ${creditosAprobados} / ${creditosTotales}`;
 }
 
-
-  resetBtn.addEventListener('click', function () {
-    localStorage.removeItem('progresoFarmacia');
-    document.querySelectorAll('.materia').forEach(m => {
-      m.classList.remove('aprobada');
-    });
-    actualizarEstadoMaterias();
-    actualizarProgreso();
-  });
 
   function romano(num) {
     const mapa = {
