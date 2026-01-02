@@ -156,4 +156,17 @@ document.addEventListener('DOMContentLoaded', function () {
     };
     return mapa[num] || num;
   }
+  resetBtn.addEventListener('click', function () {
+  localStorage.removeItem('progresoFarmacia');
+
+  document.querySelectorAll('.materia').forEach(m => {
+    m.classList.remove('aprobada');
+    m.classList.add('bloqueada');
+    m.classList.remove('desbloqueada');
+  });
+
+  actualizarEstadoMaterias();
+  actualizarProgreso();
+});
+
 });
