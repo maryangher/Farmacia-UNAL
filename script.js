@@ -98,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       div.classList.add('bloqueada');
       div.classList.remove('desbloqueada');
-      div.classList.remove('aprobada');
     }
   });
 }
