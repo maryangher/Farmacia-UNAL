@@ -128,14 +128,6 @@
     "tipo": "normal"
   },
   {
-    "id": "libre-eleccion-2",
-    "nombre": "Libre elección",
-    "creditos": 3,
-    "semestre": 2,
-    "abre": [],
-    "tipo": "libre"
-  },
-  {
     "id": "quimica-organica-ii",
     "nombre": "Química orgánica II",
     "creditos": 3,
@@ -175,6 +167,14 @@
     "abre": [],
     "tipo": "optativa"
   },
+  {
+    "id": "libre-eleccion-2",
+    "nombre": "Libre elección",
+    "creditos": 3,
+    "semestre": 3,
+    "abre": [],
+    "tipo": "libre"
+  }, 
   {
     "id": "fisioanatomia",
     "nombre": "Fisioanatomía",
