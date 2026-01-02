@@ -1,10 +1,42 @@
 [
   {
+    "id": "matematicas-basicas",
+    "nombre": "Matemáticas básicas",
+    "creditos": 4,
+    "semestre": 0,
+    "abre": ["calculo-diferencial"],
+    "tipo": "normal"
+  },
+  {
+    "id": "ingles-ii",
+    "nombre": "Inglés II",
+    "creditos": 3,
+    "semestre": 0,
+    "abre": [],
+    "tipo": "normal"
+  },
+  {
+    "id": "ingles-iii",
+    "nombre": "Inglés III",
+    "creditos": 3,
+    "semestre": 0,
+    "abre": [],
+    "tipo": "normal"
+  }, 
+  {
+    "id": "ingles-iv",
+    "nombre": "Inglés IV",
+    "creditos": 3,
+    "semestre": 0,
+    "abre": [],
+    "tipo": "normal"
+  }, 
+  {
     "id": "principios-quimica",
     "nombre": "Principios de química",
     "creditos": 3,
     "semestre": 1,
-    "abre": ["quimica-organica-i", "principios-analisis-quimicos", "quimica-inorganica-farmaceutica"],
+    "abre": ["quimica-organica-i", "principios-analisis-quimico", "quimica-inorganica-farmaceutica"],
     "tipo": "normal"
   },
   {
@@ -42,7 +74,7 @@
   {
     "id": "libre-eleccion-1",
     "nombre": "Libre elección",
-    "creditos": 3,
+    "creditos": 2,
     "semestre": 1,
     "abre": [],
     "tipo": "libre"
@@ -64,8 +96,16 @@
     "tipo": "normal"
   },
   {
-    "id": "principios-analisis-quimicos",
-    "nombre": "Principios de análisis químicos",
+    "id": "principios-analisis-quimico",
+    "nombre": "Principios de análisis químico",
+    "creditos": 3,
+    "semestre": 2,
+    "abre": ["analisis-instrumental-farmaceutico", "fisicoquimica-i" ],
+    "tipo": "normal"
+  },
+  {
+    "id": "lab-principios-analisis-quimico",
+    "nombre": "Lab principios de análisis químico",
     "creditos": 3,
     "semestre": 2,
     "abre": ["analisis-instrumental-farmaceutico"],
@@ -82,7 +122,7 @@
   {
     "id": "bioestadistica",
     "nombre": "Bioestadística fundamental",
-    "creditos": 3,
+    "creditos": 4,
     "semestre": 2,
     "abre": ["salud-publica-farmacia"],
     "tipo": "normal"
@@ -104,11 +144,11 @@
     "tipo": "normal"
   },
   {
-    "id": "lab-principios-analisis-quimico",
-    "nombre": "Lab principios de análisis químico",
-    "creditos": 3,
+    "id": "quimica-inorganica-farmaceutica",
+    "nombre": "Química inorgánica farmacéutica",
+    "creditos": 2,
     "semestre": 3,
-    "abre": ["analisis-instrumental-farmaceutico"],
+    "abre": ["farmacotecnia-i"],
     "tipo": "normal"
   },
   {
@@ -120,19 +160,11 @@
     "tipo": "normal"
   },
   {
-    "id": "fisioquimica-i",
-    "nombre": "Fisioquímica I",
+    "id": "fisicoquimica-i",
+    "nombre": "Fisicoquímica I",
     "creditos": 3,
     "semestre": 3,
     "abre": ["operaciones-unitarias"],
-    "tipo": "normal"
-  },
-  {
-    "id": "quimica-inorganica-farmaceutica",
-    "nombre": "Química inorgánica farmacéutica",
-    "creditos": 3,
-    "semestre": 3,
-    "abre": ["farmacotecnia-i"],
     "tipo": "normal"
   },
   {
@@ -162,7 +194,7 @@
   {
     "id": "operaciones-unitarias",
     "nombre": "Operaciones unitarias farmacéuticas",
-    "creditos": 3,
+    "creditos": 2,
     "semestre": 4,
     "abre": ["farmacotecnia-i"],
     "tipo": "normal"
@@ -186,7 +218,7 @@
   {
     "id": "libre-eleccion-3",
     "nombre": "Libre elección",
-    "creditos": 3,
+    "creditos": 4,
     "semestre": 4,
     "abre": [],
     "tipo": "libre"
@@ -210,7 +242,7 @@
   {
     "id": "farmacotecnia-i",
     "nombre": "Farmacotecnia I",
-    "creditos": 3,
+    "creditos": 4,
     "semestre": 5,
     "abre": ["farmacotecnia-ii", "analisis-instrumental-farmaceutico", "biofarmacia-farmacocinetica"],
     "tipo": "normal"
@@ -218,7 +250,7 @@
   {
     "id": "farmacia-quimica-i",
     "nombre": "Farmacia química I",
-    "creditos": 3,
+    "creditos": 4,
     "semestre": 5,
     "abre": ["farmacia-quimica-ii"],
     "tipo": "normal"
@@ -242,7 +274,7 @@
   {
     "id": "farmacologia-general",
     "nombre": "Farmacología general",
-    "creditos": 3,
+    "creditos": 2,
     "semestre": 6,
     "abre": ["farmacologia-especial", "toxicologia"],
     "tipo": "normal"
@@ -250,7 +282,7 @@
   {
     "id": "salud-publica-farmacia",
     "nombre": "Salud pública y farmacia",
-    "creditos": 3,
+    "creditos": 2,
     "semestre": 6,
     "abre": ["gestion-servicios", "legislacion-farmaceutica"],
     "tipo": "normal"
@@ -258,15 +290,15 @@
   {
     "id": "farmacotecnia-ii",
     "nombre": "Farmacotecnia II",
-    "creditos": 3,
+    "creditos": 4,
     "semestre": 6,
-    "abre": ["farmacia-industrial"],
+    "abre": ["farmacia-industrial", "control-calidad"],
     "tipo": "normal"
   },
   {
     "id": "analisis-instrumental-farmaceutico",
     "nombre": "Análisis instrumental farmacéutico",
-    "creditos": 3,
+    "creditos": 4,
     "semestre": 6,
     "abre": ["legislacion-farmaceutica", "aseguramiento-calidad", "control-calidad", "farmacia-industrial"],
     "tipo": "normal"
@@ -274,7 +306,7 @@
   {
     "id": "biofarmacia-farmacocinetica",
     "nombre": "Biofarmacia y farmacocinética",
-    "creditos": 3,
+    "creditos": 2,
     "semestre": 6,
     "abre": [],
     "tipo": "normal"
@@ -282,9 +314,17 @@
   {
     "id": "farmacia-quimica-ii",
     "nombre": "Farmacia química II",
-    "creditos": 3,
+    "creditos": 2,
     "semestre": 6,
     "abre": [],
+    "tipo": "normal"
+  },
+  {
+    "id": "Administración-farmaceutica",
+    "nombre": "Administración farmacéutica",
+    "creditos": 3,
+    "semestre": 6,
+    "abre": ["Aseguramiento de calidad"],
     "tipo": "normal"
   },
   {
@@ -292,13 +332,13 @@
     "nombre": "Farmacología especial",
     "creditos": 3,
     "semestre": 7,
-    "abre": [],
+    "abre": ["farmacia-hospitalaria"],
     "tipo": "normal"
   },
   {
     "id": "gestion-servicios",
     "nombre": "Gestión de servicios farmacéuticos",
-    "creditos": 3,
+    "creditos": 2,
     "semestre": 7,
     "abre": ["farmacia-hospitalaria"],
     "tipo": "normal"
@@ -306,17 +346,9 @@
   {
     "id": "legislacion-farmaceutica",
     "nombre": "Legislación farmacéutica",
-    "creditos": 3,
+    "creditos": 2,
     "semestre": 7,
     "abre": ["farmacia-hospitalaria"],
-    "tipo": "normal"
-  },
-  {
-    "id": "Administración-farmaceutica",
-    "nombre": "Administración farmacéutica",
-    "creditos": 3,
-    "semestre": 7,
-    "abre": ["Aseguramiento de calidad"],
     "tipo": "normal"
   },
   {
@@ -324,7 +356,7 @@
     "nombre": "Toxicología",
     "creditos": 3,
     "semestre": 7,
-    "abre": ["farmacia-hospitalaria"],
+    "abre": [],
     "tipo": "normal"
   },
   {
@@ -346,7 +378,7 @@
   {
     "id": "farmacia-industrial",
     "nombre": "Farmacia industrial",
-    "creditos": 3,
+    "creditos": 4,
     "semestre": 8,
     "abre": ["farmacia-hospitalaria"],
     "tipo": "normal"
@@ -354,7 +386,7 @@
   {
     "id": "control-calidad",
     "nombre": "Control de calidad farmacéutico",
-    "creditos": 3,
+    "creditos": 4,
     "semestre": 8,
     "abre": [],
     "tipo": "normal"
@@ -362,7 +394,7 @@
   {
     "id": "aseguramiento-calidad",
     "nombre": "Aseguramiento de la calidad",
-    "creditos": 3,
+    "creditos": 2,
     "semestre": 8,
     "abre": ["farmacia-hospitalaria"],
     "tipo": "normal"
@@ -394,7 +426,7 @@
   {
     "id": "farmacia-hospitalaria",
     "nombre": "Farmacia hospitalaria",
-    "creditos": 3,
+    "creditos": 9,
     "semestre": 9,
     "abre": [],
     "tipo": "normal"
@@ -434,7 +466,7 @@
   {
     "id": "trabajo-grado",
     "nombre": "Trabajo de grado",
-    "creditos": 3,
+    "creditos": 8,
     "semestre": 10,
     "abre": [],
     "tipo": "normal"
