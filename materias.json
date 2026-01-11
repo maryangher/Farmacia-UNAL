@@ -274,7 +274,7 @@
   {
     "id": "farmacologia-general",
     "nombre": "Farmacología general",
-    "creditos": 2,
+    "creditos": 3,
     "semestre": 6,
     "abre": ["farmacologia-especial", "toxicologia"],
     "tipo": "normal"
