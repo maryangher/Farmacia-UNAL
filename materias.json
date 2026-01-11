@@ -122,7 +122,7 @@
   {
     "id": "bioestadistica",
     "nombre": "Bioestadística fundamental",
-    "creditos": 4,
+    "creditos": 3,
     "semestre": 2,
     "abre": ["salud-publica-farmacia"],
     "tipo": "normal"
