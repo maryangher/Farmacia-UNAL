@@ -202,7 +202,7 @@
   {
     "id": "farmacognosia-fitoquimica",
     "nombre": "Farmacognosia y fitoquímica",
-    "creditos": 3,
+    "creditos": 4,
     "semestre": 4,
     "abre": ["farmacia-quimica-i"],
     "tipo": "normal"
