@@ -322,7 +322,7 @@
   {
     "id": "administracion-farmaceutica",
     "nombre": "Administración farmacéutica",
-    "creditos": 3,
+    "creditos": 2,
     "semestre": 6,
     "abre": ["aseguramiento-calidad"],
     "tipo": "normal"
